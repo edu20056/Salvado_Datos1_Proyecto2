@@ -83,26 +83,56 @@ namespace StoreDataManager
         }
 
 
-        public OperationStatus CreateTable(string x)
+        public OperationStatus CreateTable(string command)
         {
-            // Creates a default DB called TESTDB
-            Directory.CreateDirectory($@"{DataPath}\TESTDB");
-
-            // Creates a table file with the name provided in the parameter x
-            var tablePath = $@"{DataPath}\TESTDB\{x}.Table";
-
-            // Check if the table file already exists
-            if (!File.Exists(tablePath))
+            // Parse the command string
+            var parts = command.Split(new[] { '(', ')' }, StringSplitOptions.RemoveEmptyEntries);
+            
+            if (parts.Length != 2)
             {
-                using (File.Create(tablePath)) { } // Create the file if it does not exist
-                return OperationStatus.Success;
-            }
-            else
-            {
-                Console.WriteLine("Ya existe la tabla " +x);
+                Console.WriteLine("Comando SQL inválido.");
                 return OperationStatus.Error;
             }
+
+            // Get the table name and columns definition
+            var tableName = parts[0].Trim().Split(' ')[2]; // Get the table name after "CREATE TABLE"
+            var columnsDefinition = parts[1].Trim();
+
+            // Check if the table file already exists
+            var tablePath = $@"{DataPath}\TESTDB\{tableName}.Table";
+            if (File.Exists(tablePath))
+            {
+                Console.WriteLine("Ya existe la tabla " + tableName);
+                return OperationStatus.Error;
+            }
+
+            // Create the table file
+            using (FileStream stream = File.Create(tablePath))
+            using (BinaryWriter writer = new BinaryWriter(stream))
+            {
+                // Write the table name
+                writer.Write(tableName);
+                
+                // Parse the columns definition and write to the file
+                var columns = columnsDefinition.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
+                foreach (var column in columns)
+                {
+                    var columnDetails = column.Trim().Split(' '); // Split by space to get type and name
+                    if (columnDetails.Length != 2)
+                    {
+                        Console.WriteLine("Definición de columna inválida: " + column);
+                        return OperationStatus.Error;
+                    }
+
+                    // Example: Store column name and type (you can customize how you store this)
+                    writer.Write(columnDetails[1]); // Column name
+                    writer.Write(columnDetails[0]); // Column type
+                }
+            }
+
+            return OperationStatus.Success;
         }
+
 
         public OperationStatus Select()
         {
