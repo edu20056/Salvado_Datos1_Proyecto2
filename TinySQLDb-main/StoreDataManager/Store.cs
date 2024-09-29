@@ -21,7 +21,7 @@ namespace StoreDataManager
             }
         }
 
-        private const string DatabaseBasePath = @"C:\TinySql\";
+        private const string DatabaseBasePath = @"C:\Users\ejcan\Desktop\U\FSC\Proyecto 2\Salvado_Datos1_Proyecto2\TinySql";
         private const string DataPath = $@"{DatabaseBasePath}\Data";
         private const string SystemCatalogPath = $@"{DataPath}\SystemCatalog";
         private const string SystemDatabasesFile = $@"{SystemCatalogPath}\SystemDatabases.table";
@@ -40,29 +40,26 @@ namespace StoreDataManager
             Directory.CreateDirectory(SystemCatalogPath);
         }
 
-        public OperationStatus CreateTable()
+
+        public OperationStatus CreateTable(string x)
         {
             // Creates a default DB called TESTDB
             Directory.CreateDirectory($@"{DataPath}\TESTDB");
 
-            // Creates a default Table called ESTUDIANTES
-            var tablePath = $@"{DataPath}\TESTDB\ESTUDIANTES.Table";
+            // Creates a table file with the name provided in the parameter x
+            var tablePath = $@"{DataPath}\TESTDB\{x}.Table";
 
-            using (FileStream stream = File.Open(tablePath, FileMode.OpenOrCreate))
-            using (BinaryWriter writer = new (stream))
+            // Check if the table file already exists
+            if (!File.Exists(tablePath))
             {
-                // Create an object with a hardcoded.
-                // First field is an int, second field is a string of size 30,
-                // third is a string of 50
-                int id = 1;
-                string nombre = "Isaac".PadRight(30); // Pad to make the size of the string fixed
-                string apellido = "Ramirez".PadRight(50);
-
-                writer.Write(id);
-                writer.Write(nombre);
-                writer.Write(apellido);
+                using (File.Create(tablePath)) { } // Create the file if it does not exist
+                return OperationStatus.Success;
             }
-            return OperationStatus.Success;
+            else
+            {
+                Console.WriteLine("Ya existe la tabla " +x);
+                return OperationStatus.Error;
+            }
         }
 
         public OperationStatus Select()

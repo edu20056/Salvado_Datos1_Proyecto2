@@ -1,0 +1,280 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\ejcan\\Desktop\\U\\FSC\\Proyecto 2\\Salvado_Datos1_Proyecto2\\TinySQLDb-main\\ApiInterface\\ApiInterface.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\ejcan\\Desktop\\U\\FSC\\Proyecto 2\\Salvado_Datos1_Proyecto2\\TinySQLDb-main\\ApiInterface\\ApiInterface.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ejcan\\Desktop\\U\\FSC\\Proyecto 2\\Salvado_Datos1_Proyecto2\\TinySQLDb-main\\ApiInterface\\ApiInterface.csproj",
+        "projectName": "ApiInterface",
+        "projectPath": "C:\\Users\\ejcan\\Desktop\\U\\FSC\\Proyecto 2\\Salvado_Datos1_Proyecto2\\TinySQLDb-main\\ApiInterface\\ApiInterface.csproj",
+        "packagesPath": "C:\\Users\\ejcan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ejcan\\Desktop\\U\\FSC\\Proyecto 2\\Salvado_Datos1_Proyecto2\\TinySQLDb-main\\ApiInterface\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ejcan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\ejcan\\Desktop\\U\\FSC\\Proyecto 2\\Salvado_Datos1_Proyecto2\\TinySQLDb-main\\QueryProcessor\\QueryProcessor.csproj": {
+                "projectPath": "C:\\Users\\ejcan\\Desktop\\U\\FSC\\Proyecto 2\\Salvado_Datos1_Proyecto2\\TinySQLDb-main\\QueryProcessor\\QueryProcessor.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\ejcan\\Desktop\\U\\FSC\\Proyecto 2\\Salvado_Datos1_Proyecto2\\TinySQLDb-main\\Entities\\Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ejcan\\Desktop\\U\\FSC\\Proyecto 2\\Salvado_Datos1_Proyecto2\\TinySQLDb-main\\Entities\\Entities.csproj",
+        "projectName": "Entities",
+        "projectPath": "C:\\Users\\ejcan\\Desktop\\U\\FSC\\Proyecto 2\\Salvado_Datos1_Proyecto2\\TinySQLDb-main\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\ejcan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ejcan\\Desktop\\U\\FSC\\Proyecto 2\\Salvado_Datos1_Proyecto2\\TinySQLDb-main\\Entities\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ejcan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\ejcan\\Desktop\\U\\FSC\\Proyecto 2\\Salvado_Datos1_Proyecto2\\TinySQLDb-main\\QueryProcessor\\QueryProcessor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ejcan\\Desktop\\U\\FSC\\Proyecto 2\\Salvado_Datos1_Proyecto2\\TinySQLDb-main\\QueryProcessor\\QueryProcessor.csproj",
+        "projectName": "QueryProcessor",
+        "projectPath": "C:\\Users\\ejcan\\Desktop\\U\\FSC\\Proyecto 2\\Salvado_Datos1_Proyecto2\\TinySQLDb-main\\QueryProcessor\\QueryProcessor.csproj",
+        "packagesPath": "C:\\Users\\ejcan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ejcan\\Desktop\\U\\FSC\\Proyecto 2\\Salvado_Datos1_Proyecto2\\TinySQLDb-main\\QueryProcessor\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ejcan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\ejcan\\Desktop\\U\\FSC\\Proyecto 2\\Salvado_Datos1_Proyecto2\\TinySQLDb-main\\StoreDataManager\\StoreDataManager.csproj": {
+                "projectPath": "C:\\Users\\ejcan\\Desktop\\U\\FSC\\Proyecto 2\\Salvado_Datos1_Proyecto2\\TinySQLDb-main\\StoreDataManager\\StoreDataManager.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\ejcan\\Desktop\\U\\FSC\\Proyecto 2\\Salvado_Datos1_Proyecto2\\TinySQLDb-main\\StoreDataManager\\StoreDataManager.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ejcan\\Desktop\\U\\FSC\\Proyecto 2\\Salvado_Datos1_Proyecto2\\TinySQLDb-main\\StoreDataManager\\StoreDataManager.csproj",
+        "projectName": "StoreDataManager",
+        "projectPath": "C:\\Users\\ejcan\\Desktop\\U\\FSC\\Proyecto 2\\Salvado_Datos1_Proyecto2\\TinySQLDb-main\\StoreDataManager\\StoreDataManager.csproj",
+        "packagesPath": "C:\\Users\\ejcan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ejcan\\Desktop\\U\\FSC\\Proyecto 2\\Salvado_Datos1_Proyecto2\\TinySQLDb-main\\StoreDataManager\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ejcan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\ejcan\\Desktop\\U\\FSC\\Proyecto 2\\Salvado_Datos1_Proyecto2\\TinySQLDb-main\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\ejcan\\Desktop\\U\\FSC\\Proyecto 2\\Salvado_Datos1_Proyecto2\\TinySQLDb-main\\Entities\\Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

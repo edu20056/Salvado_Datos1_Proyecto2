@@ -1,0 +1,16 @@
+C:\Users\ejcan\Desktop\U\FSC\Proyecto 2\Salvado_Datos1_Proyecto2\TinySQLDb-main\StoreDataManager\bin\Debug\net8.0\StoreDataManager.deps.json
+C:\Users\ejcan\Desktop\U\FSC\Proyecto 2\Salvado_Datos1_Proyecto2\TinySQLDb-main\StoreDataManager\bin\Debug\net8.0\StoreDataManager.dll
+C:\Users\ejcan\Desktop\U\FSC\Proyecto 2\Salvado_Datos1_Proyecto2\TinySQLDb-main\StoreDataManager\bin\Debug\net8.0\StoreDataManager.pdb
+C:\Users\ejcan\Desktop\U\FSC\Proyecto 2\Salvado_Datos1_Proyecto2\TinySQLDb-main\StoreDataManager\bin\Debug\net8.0\Entities.dll
+C:\Users\ejcan\Desktop\U\FSC\Proyecto 2\Salvado_Datos1_Proyecto2\TinySQLDb-main\StoreDataManager\bin\Debug\net8.0\Entities.pdb
+C:\Users\ejcan\Desktop\U\FSC\Proyecto 2\Salvado_Datos1_Proyecto2\TinySQLDb-main\StoreDataManager\obj\Debug\net8.0\StoreDataManager.csproj.AssemblyReference.cache
+C:\Users\ejcan\Desktop\U\FSC\Proyecto 2\Salvado_Datos1_Proyecto2\TinySQLDb-main\StoreDataManager\obj\Debug\net8.0\StoreDataManager.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ejcan\Desktop\U\FSC\Proyecto 2\Salvado_Datos1_Proyecto2\TinySQLDb-main\StoreDataManager\obj\Debug\net8.0\StoreDataManager.AssemblyInfoInputs.cache
+C:\Users\ejcan\Desktop\U\FSC\Proyecto 2\Salvado_Datos1_Proyecto2\TinySQLDb-main\StoreDataManager\obj\Debug\net8.0\StoreDataManager.AssemblyInfo.cs
+C:\Users\ejcan\Desktop\U\FSC\Proyecto 2\Salvado_Datos1_Proyecto2\TinySQLDb-main\StoreDataManager\obj\Debug\net8.0\StoreDataManager.csproj.CoreCompileInputs.cache
+C:\Users\ejcan\Desktop\U\FSC\Proyecto 2\Salvado_Datos1_Proyecto2\TinySQLDb-main\StoreDataManager\obj\Debug\net8.0\StoreDataManager.sourcelink.json
+C:\Users\ejcan\Desktop\U\FSC\Proyecto 2\Salvado_Datos1_Proyecto2\TinySQLDb-main\StoreDataManager\obj\Debug\net8.0\StoreDat.463CAB2C.Up2Date
+C:\Users\ejcan\Desktop\U\FSC\Proyecto 2\Salvado_Datos1_Proyecto2\TinySQLDb-main\StoreDataManager\obj\Debug\net8.0\StoreDataManager.dll
+C:\Users\ejcan\Desktop\U\FSC\Proyecto 2\Salvado_Datos1_Proyecto2\TinySQLDb-main\StoreDataManager\obj\Debug\net8.0\refint\StoreDataManager.dll
+C:\Users\ejcan\Desktop\U\FSC\Proyecto 2\Salvado_Datos1_Proyecto2\TinySQLDb-main\StoreDataManager\obj\Debug\net8.0\StoreDataManager.pdb
+C:\Users\ejcan\Desktop\U\FSC\Proyecto 2\Salvado_Datos1_Proyecto2\TinySQLDb-main\StoreDataManager\obj\Debug\net8.0\ref\StoreDataManager.dll

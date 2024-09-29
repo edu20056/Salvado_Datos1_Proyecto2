@@ -1,11 +1,13 @@
 param (
     [Parameter(Mandatory = $true)]
+    [string]$TinySQL_Path,
+    [Parameter(Mandatory = $true)]
     [string]$IP,
     [Parameter(Mandatory = $true)]
     [int]$Port
 )
 
-$ipEndPoint = [System.Net.IPEndPoint]::new([System.Net.IPAddress]::Parse("127.0.0.1"), 11000)
+$ipEndPoint = [System.Net.IPEndPoint]::new([System.Net.IPAddress]::Parse("127.0.0.1"), 40401)
 
 function Send-Message {
     param (
@@ -33,7 +35,12 @@ function Receive-Message {
     $stream = New-Object System.Net.Sockets.NetworkStream($client)
     $reader = New-Object System.IO.StreamReader($stream)
     try {
-        return $null -ne $reader.ReadLine ? $reader.ReadLine() : ""
+        $line = $reader.ReadLine() 
+        if ($null -ne $line) {
+            return $line
+        } else {
+            return ""
+        }
     }
     finally {
         $reader.Close()
@@ -64,6 +71,9 @@ function Send-SQLCommand {
     $client.Close()
 }
 
-# This is an example, should not be called here
-Send-SQLCommand -command "CREATE TABLE ESTUDIANTE"
-Send-SQlCommand -command "SELECT * FROM ESTUDIANTE"
+
+
+
+
+
+
