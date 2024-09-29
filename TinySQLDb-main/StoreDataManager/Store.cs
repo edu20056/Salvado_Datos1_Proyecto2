@@ -6,6 +6,18 @@ namespace StoreDataManager
 {
     public sealed class Store
     {
+        public class ColumnDefinition
+        {
+            public string Name { get; set; }
+            public string DataType { get; set; }
+
+            public ColumnDefinition(string name, string dataType)
+            {
+                Name = name;
+                DataType = dataType;
+            }
+        }
+
         private static Store? instance = null;
         private static readonly object _lock = new object();
                
@@ -81,59 +93,71 @@ namespace StoreDataManager
             
             return OperationStatus.Success;
         }
-
-
         public OperationStatus CreateTable(string command)
         {
             // Parse the command string
             var parts = command.Split(new[] { '(', ')' }, StringSplitOptions.RemoveEmptyEntries);
             
-            if (parts.Length != 2)
+            // Extract the table name (first part of the command)
+            var tableName = parts[0].Trim().Split(' ')[2]; // Asumiendo que el comando comienza con "CREATE TABLE"
+            
+            // Extract columns and their definitions (second part of the command)
+            var columnsString = parts[1].Trim();
+            var columnDefinitions = columnsString.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
+
+            var columns = new List<ColumnDefinition>();
+
+            // Parse each column definition
+            foreach (var columnDef in columnDefinitions)
             {
-                Console.WriteLine("Comando SQL inválido.");
-                return OperationStatus.Error;
+                var columnParts = columnDef.Trim().Split(new[] { ' ' }, 2); // Split into column name and data type
+                if (columnParts.Length != 2)
+                {
+                    Console.WriteLine($"Definición de columna inválida: {columnDef}");
+                    return OperationStatus.Error;
+                }
+
+                var columnName = columnParts[0].Trim();
+                var dataType = columnParts[1].Trim();
+
+                // Create a new instance of ColumnDefinition with the name and dataType
+                columns.Add(new ColumnDefinition(columnName, dataType));
             }
 
-            // Get the table name and columns definition
-            var tableName = parts[0].Trim().Split(' ')[2]; // Get the table name after "CREATE TABLE"
-            var columnsDefinition = parts[1].Trim();
-
-            // Check if the table file already exists
+            // Define the path for the table
             var tablePath = $@"{DataPath}\TESTDB\{tableName}.Table";
+
+            // Check if the table already exists
             if (File.Exists(tablePath))
             {
-                Console.WriteLine("Ya existe la tabla " + tableName);
+                Console.WriteLine($"La tabla {tableName} ya existe.");
                 return OperationStatus.Error;
             }
 
             // Create the table file
-            using (FileStream stream = File.Create(tablePath))
-            using (BinaryWriter writer = new BinaryWriter(stream))
+            using (var writer = new StreamWriter(tablePath))
             {
                 // Write the table name
-                writer.Write(tableName);
-                
-                // Parse the columns definition and write to the file
-                var columns = columnsDefinition.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
-                foreach (var column in columns)
-                {
-                    var columnDetails = column.Trim().Split(' '); // Split by space to get type and name
-                    if (columnDetails.Length != 2)
-                    {
-                        Console.WriteLine("Definición de columna inválida: " + column);
-                        return OperationStatus.Error;
-                    }
+                writer.WriteLine(tableName);
 
-                    // Example: Store column name and type (you can customize how you store this)
-                    writer.Write(columnDetails[1]); // Column name
-                    writer.Write(columnDetails[0]); // Column type
+                // Write the column definitions
+                for (int i = 0; i < columns.Count; i++)
+                {
+                    var column = columns[i];
+                    // Write each column in the format: ColumnName DataType
+                    writer.Write($"{column.Name} {column.DataType}");
+                    if (i < columns.Count - 1) // Add a comma if not the last column
+                    {
+                        writer.Write(", ");
+                    }
                 }
+
+                // End the line after all columns
+                writer.WriteLine();
             }
 
             return OperationStatus.Success;
         }
-
-
         public OperationStatus Select()
         {
             // Creates a default Table called ESTUDIANTES
