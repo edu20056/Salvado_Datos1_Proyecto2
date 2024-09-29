@@ -39,6 +39,48 @@ namespace StoreDataManager
             // exist when initializing
             Directory.CreateDirectory(SystemCatalogPath);
         }
+        private OperationStatus Insert(string tableName, List<object> values)
+        {
+            // Ruta de la tabla donde se insertarán los datos
+            var tablePath = $@"{DataPath}\TESTDB\{tableName}.Table";
+
+            // Verificar si la tabla existe
+            if (!File.Exists(tablePath))
+            {
+                Console.WriteLine($"La tabla {tableName} no existe.");
+                return OperationStatus.Error;
+            }
+
+            // Abrir el archivo de la tabla para agregar los nuevos datos
+            using (FileStream stream = new FileStream(tablePath, FileMode.Append, FileAccess.Write))
+            using (BinaryWriter writer = new BinaryWriter(stream))
+            {
+                // Escribir los valores en el archivo de la tabla
+                foreach (var value in values)
+                {
+                    if (value is int intValue)
+                    {
+                        writer.Write(intValue);
+                    }
+                    else if (value is string stringValue)
+                    {
+                        // Ajustar el tamaño de las cadenas
+                        writer.Write(stringValue.PadRight(30)); // Asumiendo tamaño 30 para nombres
+                    }
+                    else if (value is DateTime dateTimeValue)
+                    {
+                        writer.Write(dateTimeValue.ToBinary()); // Guardar DateTime como un número
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Tipo de dato no soportado: {value.GetType()}");
+                        return OperationStatus.Error;
+                    }
+                }
+            }
+            
+            return OperationStatus.Success;
+        }
 
 
         public OperationStatus CreateTable(string x)

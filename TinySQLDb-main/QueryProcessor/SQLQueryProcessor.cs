@@ -32,6 +32,10 @@ namespace QueryProcessor
             {
                 return new Select().Execute();
             }
+            if (sentence.StartsWith("INSERT INTO"))
+            {
+                return new Select().Execute(); //Por el momento se le pone lo mismo de select.....
+            }
             else
             {
                 throw new UnknownSQLSentenceException();
